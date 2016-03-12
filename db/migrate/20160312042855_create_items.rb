@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :title
       t.text :description
       t.datetime :date
+      t.string :image
       t.string :rss_url
 
       t.timestamps null: false

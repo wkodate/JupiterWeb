@@ -4,8 +4,7 @@ class CreateRsses < ActiveRecord::Migration
       t.string :rss_url
       t.string :title
       t.string :site_link
-      t.string :description
-      t.boolean :crawl
+      t.text :description
 
       t.timestamps null: false
     end
