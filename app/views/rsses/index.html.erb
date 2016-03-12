@@ -1,33 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, 'All rsses') %>
+<h1>All rsses</h1>
 
-<h1>Listing Rsses</h1>
+<%= will_paginate %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Rss url</th>
-      <th>Title</th>
-      <th>Site link</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<ul class="rsses">
+    <%= render @rsses %>
+</ul>
 
-  <tbody>
-    <% @rsses.each do |rss| %>
-      <tr>
-        <td><%= rss.rss_url %></td>
-        <td><%= rss.title %></td>
-        <td><%= rss.site_link %></td>
-        <td><%= rss.description %></td>
-        <td><%= link_to 'Show', rss %></td>
-        <td><%= link_to 'Edit', edit_rss_path(rss) %></td>
-        <td><%= link_to 'Destroy', rss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Rss', new_rss_path %>
+<%= will_paginate %>
