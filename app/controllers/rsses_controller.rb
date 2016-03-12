@@ -1,7 +1,7 @@
 class RssesController < ApplicationController
 
   def index
-    @rsses = Rss.all
+    @rsses = Rss.paginate(page: params[:page])
   end
 
   def show
