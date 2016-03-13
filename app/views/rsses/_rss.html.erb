@@ -1,3 +1,5 @@
 <li>
   <%= link_to rss.title, rss %>
+  <%= link_to "delete", rss, method: :delete,
+                                    data: { confirm: "You sure?" } %>
 </li>
