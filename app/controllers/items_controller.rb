@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-    @item = Item.find(params[:id])
+    @rss = Rss.find(@item.rss_id)
   end
 
   # GET /items/new
@@ -30,16 +30,13 @@ class ItemsController < ApplicationController
     end
   end
 
-
   # GET /items/1/edit
   def edit
-    @item = Item.find(params[:id])
   end
 
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
-    @item = Item.find(params[:id])
     if @item.update_attributes(item_params)
       flash[:success] = "Item profile updated"
       redirect_to @item
