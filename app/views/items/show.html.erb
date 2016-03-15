@@ -21,8 +21,13 @@
 </p>
 
 <p>
+  <strong>Rss title:</strong>
+  <%= @rss.title %>
+</p>
+
+<p>
   <strong>Rss url:</strong>
-  <%= @item.rss_url %>
+  <%= @rss.rss_url %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
