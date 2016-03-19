@@ -1,12 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   rss_url: MyString
   title: MyString
   site_link: MyString
   description: MyText
 
 two:
+  id: 2
   rss_url: MyString
   title: MyString
   site_link: MyString
