@@ -14,40 +14,40 @@
 ActiveRecord::Schema.define(version: 20160313125539) do
 
   create_table "items", force: :cascade do |t|
-    t.string   "link",        limit: 255
-    t.string   "title",       limit: 255
-    t.text     "description", limit: 65535
+    t.string   "link"
+    t.string   "title"
+    t.text     "description"
     t.datetime "date"
-    t.string   "image",       limit: 255
-    t.integer  "rss_id",      limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "image"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "rss_id"
   end
 
   create_table "rsses", force: :cascade do |t|
-    t.string   "rss_url",     limit: 255
-    t.string   "title",       limit: 255
-    t.string   "site_link",   limit: 255
-    t.text     "description", limit: 65535
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "rss_url"
+    t.string   "title"
+    t.string   "site_link"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",              limit: 255
-    t.string   "email",             limit: 255
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
-    t.string   "password_digest",   limit: 255
-    t.string   "remember_digest",   limit: 255
-    t.boolean  "admin",                         default: false
-    t.string   "activation_digest", limit: 255
-    t.boolean  "activated",                     default: false
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "password_digest"
+    t.string   "remember_digest"
+    t.boolean  "admin",             default: false
+    t.string   "activation_digest"
+    t.boolean  "activated",         default: false
     t.datetime "activated_at"
-    t.string   "reset_digest",      limit: 255
+    t.string   "reset_digest"
     t.datetime "reset_sent_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

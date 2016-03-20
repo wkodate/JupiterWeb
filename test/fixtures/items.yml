@@ -6,7 +6,7 @@ one:
   description: MyText
   date: 2016-03-12 13:28:55
   image: MyString
-  rss_url: MyString
+  rss_id: 1
 
 two:
   link: MyString
@@ -14,4 +14,4 @@ two:
   description: MyText
   date: 2016-03-12 13:28:55
   image: MyString
-  rss_url: MyString
+  rss_id: 2
