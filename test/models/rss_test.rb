@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class RssTest < ActiveSupport::TestCase
+
   def setup
     @rss = Rss.new(id: "1", rss_url: "http://www.example.rdf",
       title: "example", site_link: "http://www.example.com", description: "example")
