@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class ItemsControllerTest < ActionController::TestCase
+
   setup do
     @item = items(:one)
   end
@@ -45,4 +46,5 @@ class ItemsControllerTest < ActionController::TestCase
 
     assert_redirected_to items_path
   end
+
 end
