@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :logged_in_user
+  before_action :admin_user
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
@@ -54,6 +56,20 @@ class ItemsController < ApplicationController
   end
 
   private
+
+    # ログイン済みユーザーかどうか確認
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    # 管理者かどうか確認
+    def admin_user
+      redirect_to(login_url) unless current_user.admin?
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_item
       @item = Item.find(params[:id])
@@ -63,4 +79,5 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:link, :title, :description, :date, :rss_id)
     end
+
 end
