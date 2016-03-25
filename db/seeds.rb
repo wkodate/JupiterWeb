@@ -14,3 +14,28 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now
             )
+
+Rss.create!(rss_url:  "http://blog.livedoor.jp/rock1963roll/index.rdf",
+             title: "RSS Title1",
+             site_link: "http://blog.livedoor.jp/rock1963roll/",
+             description: "This is RSS sample",
+            )
+Rss.create!(rss_url:  "http://blog.livedoor.jp/livejupiter2/index.rdf",
+             title: "RSS Title2",
+             site_link: "http://blog.livedoor.jp/livejupiter2/",
+             description: "Hello, RSS",
+            )
+
+99.times do |n|
+  link = Faker::Internet.url
+  title = Faker::Name.title
+  description = Faker::Lorem.sentence
+  date = Faker::Date.between(7.days.ago, Date.today)
+  image = Faker::Company.logo
+  Item.create!(link: link,
+               title: title,
+               description: description,
+               date: date,
+               image: image,
+              )
+end

@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :logged_in_user
-  before_action :admin_user
+  before_action :admin_user, except: [:index]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   # GET /items
