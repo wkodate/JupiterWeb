@@ -1,7 +1,10 @@
-<li>
-  <%= link_to item.title, item %>
+<table class="table">
+  <td><%= link_to item.title, item.link, :target => "_blank"%></td>
   <% if current_user && current_user.admin? %>
-    | <%= link_to "delete", item, method: :delete, class: "btn btn-danger",
+  <td align="right"><%= link_to 'show', item, class: "btn btn-primary" %></td>
+  <td align="right">
+    <%= link_to "delete", item, method: :delete, class: "btn btn-danger",
                                   data: { confirm: "You sure?" } %>
+                                </td>
   <% end %>
-</li>
+</table>

@@ -6,7 +6,8 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.paginate(page: params[:page]).order("date DESC")
+    @items = Item.eager_load(:rss).paginate(page: params[:page]).order("date DESC")
+    p @items
   end
 
   # GET /items/1
