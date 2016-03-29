@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
-  root 'static_pages#home'
+  root 'items#index'
 
   get 'password_resets/new'
   get 'password_resets/edit'
@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'users/new'
   get 'rsses/index'
   get 'items/index'
+  get 'home' => 'static_pages#home'
   get 'help' => 'static_pages#help'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'

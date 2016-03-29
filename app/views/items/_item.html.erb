@@ -1,5 +1,11 @@
-<li>
-  <%= link_to item.title, item %>
-  <%= link_to "delete", item, method: :delete,
-                                    data: { confirm: "You sure?" } %>
-</li>
+<table class="table">
+  <td><%= link_to item.title, item.link, :target => "_blank"%></td>
+  <td><%= link_to item.rss_title, item.rss_site_link, :target => "_blank"%></td>
+  <% if current_user && current_user.admin? %>
+  <td align="right"><%= link_to 'show', item, class: "btn btn-primary" %></td>
+  <td align="right">
+    <%= link_to "delete", item, method: :delete, class: "btn btn-danger",
+                                  data: { confirm: "You sure?" } %>
+                                </td>
+  <% end %>
+</table>

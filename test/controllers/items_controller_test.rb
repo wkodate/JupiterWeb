@@ -55,9 +55,9 @@ class ItemsControllerTest < ActionController::TestCase
     assert_redirected_to items_path
   end
 
-  test "should redirect index when not loggined in" do
+  test "should not redirect index when not loggined in" do
     get :index
-    assert_redirected_to login_url
+    assert_response :success
   end
 
   test "should get new when not loggined in" do
