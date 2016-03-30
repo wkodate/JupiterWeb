@@ -60,8 +60,16 @@ p {
 }
 
 /* header */
+header {
+  background: #009688;
+}
 
-#logo {
+#logo-image {
+  float: left;
+  margin-right: 10px;
+}
+
+#logo-text {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -72,11 +80,10 @@ p {
   font-weight: bold;
 }
 
-#logo:hover {
+#logo-text:hover {
   color: #fff;
   text-decoration: none;
 }
-
 
 /* footer */
 
