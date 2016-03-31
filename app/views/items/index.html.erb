@@ -1,11 +1,18 @@
-<% provide(:title, 'なんJまとめのまとめ') %>
-<h1>なんJまとめのまとめ</h1>
 <% if current_user && current_user.admin? %>
   <%= link_to "Create new item", new_item_path, class: "btn btn-primary" %>
 <% end %>
 
-<ul class="table">
+<table class="table">
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>サイト元</th>
+      <th>更新日</th>
+    </tr>
+  </thead>
+  <tbody>
     <%= render @items %>
-</ul>
+  </tbody>
+</table>
 
 <%= will_paginate %>
