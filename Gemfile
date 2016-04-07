@@ -52,8 +52,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  # mysql
-  gem 'mysql2', '~> 0.3.20'
 end
 
 group :test do
@@ -63,7 +61,9 @@ group :test do
 end
 
 group :production do
+  # mysql
+  gem 'mysql2', '~> 0.3.20'
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-   gem 'puma', '2.11.1'
+  gem 'puma', '2.11.1'
 end
