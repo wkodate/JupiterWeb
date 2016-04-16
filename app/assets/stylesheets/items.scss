@@ -1,3 +1,15 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.share-button {
+	overflow: hidden;
+  list-style: none;
+}
+.share-button li {
+	float: left;
+	margin-right: 4px;
+}
+.share-button iframe {
+	margin: 0 !important;
+}
