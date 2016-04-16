@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -52,8 +52,6 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  # mysql
-  gem 'mysql2', '~> 0.3.20'
 end
 
 group :test do
@@ -63,7 +61,10 @@ group :test do
 end
 
 group :production do
+  # mysql
+  gem 'mysql2', '~> 0.3.20'
   gem 'pg', '0.17.1'
   gem 'rails_12factor', '0.0.2'
-   gem 'puma', '2.11.1'
+  gem 'puma', '2.11.1'
+  gem 'google-analytics-rails'
 end
