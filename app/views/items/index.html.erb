@@ -1,3 +1,5 @@
+<%= render 'share' %>
+
 <% if current_user && current_user.admin? %>
   <%= link_to "Create new item", new_item_path, class: "btn btn-primary" %>
 <% end %>
@@ -16,3 +18,5 @@
 </table>
 
 <%= will_paginate %>
+
+<%= render 'timeline' %>
