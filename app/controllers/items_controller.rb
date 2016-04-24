@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_meta_tag
   before_action :logged_in_user, except: [:index]
   before_action :admin_user, except: [:index]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
@@ -7,7 +8,6 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.eager_load(:rss).paginate(page: params[:page]).order("date DESC")
-    p @items
   end
 
   # GET /items/1
@@ -57,6 +57,15 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def set_meta_tag
+    set_meta_tags title: "なんJまとめのまとめ | プロ野球情報満載！なんでも実況まとめブログのアンテナサイト",
+                  keywords: "なんJまとめのまとめ,なんJ,アンテナ,野球",
+                  description: "なんでも実況(ジュピター)まとめブログのアンテナサイトです。プロ野球好きにはたまらない野球情報が盛りだくさん！数あるなんJまとめサイトを最新記事からまとめて閲覧することができます。野球,NPB,MLB,なんJ,おんJネタが好きな方にはおすすめ！",
+                  icon: "/favicon.ico",
+                  author: "https://twitter.com/hbwandeow",
+                  canonical: "https://matome-nanj.net/"
+  end
 
     # ログイン済みユーザーかどうか確認
     def logged_in_user
