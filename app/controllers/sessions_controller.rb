@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_action :set_meta_tag
+
   def new
   end
   def create
@@ -23,4 +25,12 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+
+  private
+
+  def set_meta_tag
+    set_meta_tags noindex: true
+    set_meta_tags nofollow: true
+  end
+
 end

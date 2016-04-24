@@ -1,4 +1,5 @@
 class RssesController < ApplicationController
+  before_action :set_meta_tag
   before_action :logged_in_user
   before_action :admin_user
 
@@ -45,6 +46,10 @@ class RssesController < ApplicationController
   end
 
   private
+    def set_meta_tag
+      set_meta_tags noindex: true
+      set_meta_tags nofollow: true
+    end
 
     def rss_params
       params.require(:rss).permit(:rss_url, :title, :site_link, :description)
