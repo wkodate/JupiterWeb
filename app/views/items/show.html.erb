@@ -1,34 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'adhead' %>
+
 <p>
-  <strong>Link:</strong>
-  <%= @item.link %>
+  <strong><%= @item.title %> / <%= @rss.title %></strong>
 </p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @item.title %>
+  <%= image_tag @item.image %>
 </p>
 
 <p>
-  <strong>Description:</strong>
   <%= @item.description %>
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @item.date %>
+<%= link_to '続きを読む', @item.link, class: "btn btn-secondary btn-lg btn-block", :target => "_blank" %>
 </p>
+
+<%= render 'adtail' %>
 
 <p>
-  <strong>Rss title:</strong>
-  <%= @rss.title %>
+<%= link_to '<< 記事一覧に戻る', root_path %>
 </p>
 
-<p>
-  <strong>Rss url:</strong>
-  <%= @rss.rss_url %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<%= render 'share' %>
