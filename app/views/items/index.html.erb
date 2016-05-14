@@ -1,5 +1,3 @@
-<%= render 'share' %>
-
 <%= render 'adhead' %>
 
 <% if current_user && current_user.admin? %>
@@ -20,5 +18,7 @@
 <%= render 'adtail' %>
 
 <%= will_paginate(:page_links => false) %>
+
+<%= render 'share' %>
 
 <%= render 'timeline' %>
