@@ -1,7 +1,7 @@
 <tr>
   <td>
     <p><b><%= link_to item.title, item.link, :target => "_blank"%></b></p>
-    <small><i><%= link_to item.rss_title, item.rss_site_link, :target => "_blank"%></i></small><br>
+    <small><i><%= item.rss_title %></i></small><br>
     <small><%= link_to item.date.strftime('%Y年%m月%d日 %H:%M'), item %></small>
   </td>
 <% if current_user && current_user.admin? %>
