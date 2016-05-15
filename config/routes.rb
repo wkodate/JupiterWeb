@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
-  get 'users/new'
+  #get 'users/new'
   get 'rsses/index'
   get 'items/index'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+  #post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
   resources :items
