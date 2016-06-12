@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
       card: "summary",
       site: request.url,
       title: @item.title,
-      decription: @item.description,
+      description: @item.description,
       image: @item.image,
     }
   end
