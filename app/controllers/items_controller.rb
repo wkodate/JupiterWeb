@@ -13,6 +13,12 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @rss = Rss.find(@item.rss_id)
+    set_meta_tags twitter: {
+      card: "summary",
+      title: @item.title,
+      decription: @item.description,
+      image: @item.image,
+    }
   end
 
   # GET /items/new
