@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
     @rss = Rss.find(@item.rss_id)
     set_meta_tags twitter: {
       card: "summary",
+      site: request.url,
       title: @item.title,
       decription: @item.description,
       image: @item.image,
