@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= display_meta_tags site: 'なんJまとめのまとめ | プロ野球情報満載！なんでも実況まとめブログのアンテナサイト',
-    keywords: "なんJまとめのまとめ,なんJ,アンテナ,野球",
-    description: "なんでも実況(ジュピター)まとめブログのアンテナサイトです。プロ野球好きにはたまらない野球情報が盛りだくさん！数あるなんJまとめサイトを最新記事からまとめて閲覧することができます。野球,NPB,MLB,なんJ,おんJネタが好きな方にはおすすめ！",
-    icon: "favicon.ico",
-    author: "https://twitter.com/hbwandeow",
-    canonical: "https://matome-nanj.net",
-    og: {
-      title:    'なんJまとめのまとめ',
-      type:     'website',
-      url:      'https://matome-nanj.net',
-      image:    'favicon.ico',
-    }
-  %>
+  <%= display_meta_tags default_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
