@@ -2,9 +2,9 @@
 
 <%= render 'adhead' %>
 
-<h2>
-  <strong><%= @item.title %> / <%= @rss.title %></strong>
-</h2>
+<h1>
+  <%= @item.title %> <br><small class="text-muted"><%= @rss.title %></small>
+</h1>
 
 <p>
 <%= image_tag @item.image, style: 'max-height:100%;max-width:100%;' %>
@@ -15,7 +15,7 @@
 </p>
 
 <p>
-<%= link_to '続きを読む', @item.link, class: "btn btn-secondary btn-lg btn-block", :target => "_blank" %>
+<%= link_to '続きを読む', @item.link, class: "center-block btn btn-lg btn-custom", :target => "_blank" %>
 </p>
 
 <%= render 'adtail' %>
