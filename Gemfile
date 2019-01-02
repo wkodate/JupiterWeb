@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-
+0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '5.2.2'
 # Bootstrap
 gem 'bootstrap-sass', '3.3.6'
 # bcrypt
@@ -17,7 +17,9 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails'
+gem 'railties'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
@@ -65,9 +67,9 @@ end
 
 group :production do
   # mysql
-  gem 'mysql2', '~> 0.3.20'
-  gem 'pg', '0.17.1'
+  gem 'mysql2', '~> 0.5.2'
+  gem 'pg'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma', '2.11.1'
+  gem 'puma'
   gem 'google-analytics-rails'
 end
