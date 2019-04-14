@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2'
+gem 'rails', '5.2.2.1'
 # Bootstrap
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 # bcrypt
 gem 'bcrypt', '3.1.10'
 # faker
