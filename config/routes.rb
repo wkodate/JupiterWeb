@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'rsses/index'
   get 'items/index'
-  get 'about' => 'static_pages#about'
-  get 'contact' => 'static_pages#contact'
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'about', to: 'static_pages#about'
+  get 'contact', to: 'static_pages#contact'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 
   resources :items
   resources :rsses
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   # 普段はコメントアウト
   #get 'users/new'
-  #get 'signup' => 'users#new'
+  #get 'signup', to: 'users#new'
   #get 'password_resets/new'
   #get 'password_resets/edit'
   #resources :password_resets, only: [:new, :create, :edit, :update]
@@ -28,10 +28,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #   get 'products/:id', to: 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  #   get 'products/:id/purchase', to: 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
