@@ -8,6 +8,11 @@ class ItemsControllerTest < ActionController::TestCase
     @not_admin = users(:archer)
   end
 
+  test "should get root" do
+    get FILL_IN
+    assert_response FILL_IN
+  end
+
   test "should get index" do
     log_in_as(@admin_user)
     get :index
