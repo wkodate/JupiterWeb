@@ -1,16 +1,13 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get about" do
-    get about_url
-    assert_response :success
-    assert_select "title", "なんJまとめのまとめ"
+  def setup
+    @title = "なんJまとめのまとめ"
   end
-
-  test "should get contact" do
-    get contact_url
+  test "should get about" do
+    get about_path
     assert_response :success
-    assert_select "title", "なんJまとめのまとめ"
+    assert_select "title", "#{@title}"
   end
 
 end
