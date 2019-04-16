@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   # 普段はコメントアウト
   #get 'users/new'
-  #get 'signup', to: 'users#new'
+  get 'signup', to: 'users#new'
   #get 'password_resets/new'
   #get 'password_resets/edit'
   #resources :password_resets, only: [:new, :create, :edit, :update]

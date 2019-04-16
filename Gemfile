@@ -37,6 +37,8 @@ gem 'meta-tags'
 gem 'sitemap_generator'
 # shorten time to launch
 gem 'bootsnap', require: false
+# test for rails5
+gem 'rails-controller-testing'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
