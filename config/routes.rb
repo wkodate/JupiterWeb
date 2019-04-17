@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'rsses/index'
   get 'items/index'
   get 'about', to: 'static_pages#about'
-  get 'contact', to: 'static_pages#contact'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
@@ -19,7 +18,7 @@ Rails.application.routes.draw do
 
   # 普段はコメントアウト
   #get 'users/new'
-  #get 'signup', to: 'users#new'
+  get 'signup', to: 'users#new'
   #get 'password_resets/new'
   #get 'password_resets/edit'
   #resources :password_resets, only: [:new, :create, :edit, :update]

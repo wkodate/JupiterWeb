@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SiteLayoutTest < ActionController::TestCase
+class SiteLayoutTest < ActionDispatch::IntegrationTest
 
   test "layout links" do
     get about_path
