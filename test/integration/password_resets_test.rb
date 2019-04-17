@@ -38,21 +38,24 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
     assert_select "input[name=email][type=hidden][value=?]", user.email
     # 無効なパスワードと確認
     patch password_reset_path(user.reset_token),
+      params: {
           email: user.email,
           user: { password:              "foobaz",
-                  password_confirmation: "barquux" }
+                  password_confirmation: "barquux" } }
     assert_select 'div#error_explanation'
     # パスワードが空
     patch password_reset_path(user.reset_token),
+      params: {
           email: user.email,
           user: { password:              "",
-                  password_confirmation: "" }
+                  password_confirmation: "" } }
     assert_select 'div#error_explanation'
     # 有効なパスワードと確認
     patch password_reset_path(user.reset_token),
+      params: {
           email: user.email,
           user: { password:              "foobaz",
-                  password_confirmation: "foobaz" }
+                  password_confirmation: "foobaz" } }
     assert is_logged_in?
     assert_not flash.empty?
     assert_redirected_to user
