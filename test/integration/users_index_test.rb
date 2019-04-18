@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UsersIndexTest < ActionController::TestCase
+class UsersIndexTest < ActionDispatch::IntegrationTest
 
   def setup
     @admin = users(:michael)

@@ -17,11 +17,11 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
 
   # 普段はコメントアウト
-  #get 'users/new'
   get 'signup', to: 'users#new'
+  #get 'signup', to: 'users#create'
   #get 'password_resets/new'
-  #get 'password_resets/edit'
-  #resources :password_resets, only: [:new, :create, :edit, :update]
+  get 'password_resets/edit'
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

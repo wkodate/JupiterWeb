@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ItemTest < ActiveSupport::TestCase
+class ItemTest < ActionDispatch::IntegrationTest
 
   def setup
     @item = Item.new(id: "1", link: "http://www.example.com",
