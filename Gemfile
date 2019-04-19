@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2'
+gem 'rails', '5.2.2.1'
 # Bootstrap
-gem 'bootstrap-sass', '3.3.6'
+gem 'bootstrap-sass', '3.4.1'
 # bcrypt
-gem 'bcrypt', '3.1.10'
+gem 'bcrypt', '3.1.11'
 # faker
-gem 'faker', '1.4.2'
+gem 'faker', '1.7.3'
 # will_paginate
-gem 'will_paginate', '3.0.7'
+gem 'will_paginate', '3.1.7'
 # bootstrap-will_paginate
-gem 'bootstrap-will_paginate', '0.0.10'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -35,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'meta-tags'
 # sitemap generator
 gem 'sitemap_generator'
+# shorten time to launch
+gem 'bootsnap', require: false
+# test for rails5
+gem 'rails-controller-testing'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -49,7 +53,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring', '1.1.3'
 end
