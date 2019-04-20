@@ -39,6 +39,8 @@ gem 'sitemap_generator'
 gem 'bootsnap', require: false
 # test for rails5
 gem 'rails-controller-testing'
+# code coverage for ruby
+gem 'coveralls', require: false
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
