@@ -1,4 +1,5 @@
-# JupiterWeb
+# JupiterWeb [![Build Status](https://travis-ci.org/wkodate/JupiterWeb.svg?branch=master)](https://travis-ci.org/wkodate/JupiterWeb)
+
 Jupiter Web Application
 
 * Website: https://matome-nanj.net
