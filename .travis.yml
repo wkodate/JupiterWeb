@@ -1,1 +1,3 @@
 language: ruby
+after_success:
+- CI=true TRAVIS=true coveralls --verbose
