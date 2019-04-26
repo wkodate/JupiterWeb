@@ -9,7 +9,7 @@ gem 'bcrypt', '3.1.11'
 # faker
 gem 'faker', '1.7.3'
 # will_paginate
-gem 'will_paginate', '3.1.7'
+gem 'will_paginate'
 # bootstrap-will_paginate
 gem 'bootstrap-will_paginate', '1.0.0'
 # Use SCSS for stylesheets
@@ -41,6 +41,9 @@ gem 'bootsnap', require: false
 gem 'rails-controller-testing'
 # code coverage for ruby
 gem 'coveralls', require: false
+# admin tool
+gem 'activeadmin'
+gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
