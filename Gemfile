@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2.1'
+gem 'rails', '5.2.3'
 # Bootstrap
 gem 'bootstrap-sass', '3.4.1'
 # bcrypt
@@ -68,7 +68,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.7.0'
+  gem 'bindex', '~> 0.7.0'
 end
 
 group :test do

@@ -13,7 +13,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show item" do
-    get item_path(@item)
+    get items_path(@item)
     assert_response :success
   end
 

@@ -10,7 +10,6 @@ class RssesController < ApplicationController
   end
 
   def new
-    @rss = Rss.new
   end
 
   def create
