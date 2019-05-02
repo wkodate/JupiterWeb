@@ -45,6 +45,8 @@ gem 'coveralls', require: false
 gem 'activeadmin'
 gem 'devise'
 gem 'nokogiri', '~> 1.10.3'
+# heroku
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -80,6 +82,5 @@ group :production do
   #gem 'mysql2', '~> 0.5.2'
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma'
   gem 'google-analytics-rails'
 end
