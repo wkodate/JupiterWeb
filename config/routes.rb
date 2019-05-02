@@ -5,13 +5,9 @@ Rails.application.routes.draw do
   #   # You can have the root of your site routed with "root"
   root 'items#index'
 
-  get 'sessions/new'
   get 'rsses/index'
   get 'items/index'
   get 'about', to: 'static_pages#about'
-  get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
 
   resources :items
   resources :rsses

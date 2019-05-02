@@ -44,6 +44,7 @@ gem 'coveralls', require: false
 # admin tool
 gem 'activeadmin'
 gem 'devise'
+gem 'nokogiri', '~> 1.10.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -76,7 +77,7 @@ end
 
 group :production do
   # mysql
-  gem 'mysql2', '~> 0.5.2'
+  #gem 'mysql2', '~> 0.5.2'
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
   gem 'puma'
