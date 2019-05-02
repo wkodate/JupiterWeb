@@ -1,7 +1,5 @@
 class RssesController < ApplicationController
   before_action :set_meta_tag
-  before_action :logged_in_user
-  before_action :admin_user
 
   def index
     @rsses = Rss.paginate(page: params[:page])
@@ -53,20 +51,6 @@ class RssesController < ApplicationController
 
     def rss_params
       params.require(:rss).permit(:rss_url, :title, :site_link, :description)
-    end
-
-    # ログイン済みユーザーかどうか確認
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
-
-    # 管理者かどうか確認
-    def admin_user
-      redirect_to(login_url) unless current_user.admin?
     end
 
 end

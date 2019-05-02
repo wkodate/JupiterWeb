@@ -4,11 +4,4 @@
     <small><i><%= item.rss_title %></i></small><br>
     <small><%= link_to item.date.strftime('%Y年%m月%d日 %H:%M'), item %></small>
   </td>
-<% if current_user && current_user.admin? %>
-<td align="right"><%= link_to 'show', item, class: "btn btn-primary" %></td>
-<td align="right">
- <%= link_to "delete", item, method: :delete, class: "btn btn-danger",
-                                data: { confirm: "You sure?" } %>
-                              </td>
-<% end %>
 </tr>
