@@ -5,21 +5,11 @@ Rails.application.routes.draw do
   #   # You can have the root of your site routed with "root"
   root 'items#index'
 
-  get 'rsses/index'
-  get 'items/index'
+  get 'rsses', to: 'rsses#index'
+  get 'items', to: 'items#index'
+  get '/items/:id', :to => 'items#show', :as => :item
+  get '/rsses/:id', :to => 'rsses#show', :as => :rss
   get 'about', to: 'static_pages#about'
-
-  resources :items
-  resources :rsses
-  resources :users
-  resources :account_activations, only: [:edit]
-
-  # 普段はコメントアウト
-  get 'signup', to: 'users#new'
-  #get 'signup', to: 'users#create'
-  #get 'password_resets/new'
-  get 'password_resets/edit'
-  resources :password_resets, only: [:new, :create, :edit, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
