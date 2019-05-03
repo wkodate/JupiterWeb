@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 0
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.2.2.1'
+gem 'rails', '5.2.3'
 # Bootstrap
 gem 'bootstrap-sass', '3.4.1'
 # bcrypt
@@ -44,6 +44,9 @@ gem 'coveralls', require: false
 # admin tool
 gem 'activeadmin'
 gem 'devise'
+gem 'nokogiri', '~> 1.10.3'
+# heroku
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -65,7 +68,8 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 3.7.0'
+  gem 'bindex', '~> 0.7.0'
 end
 
 group :test do
@@ -76,9 +80,8 @@ end
 
 group :production do
   # mysql
-  gem 'mysql2', '~> 0.5.2'
+  #gem 'mysql2', '~> 0.5.2'
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma'
   gem 'google-analytics-rails'
 end
