@@ -23,14 +23,15 @@ namespace :rss do
       rss.items.each do |item|
         link =  item.link
         title = item.title
+        image = ""
         date = item.date
         # save db
-        #i = Item.new(link: link, title: title)
         Item.create!(
           link: link,
           title: title,
           date: date,
-          rss_id: rss_id
+          image: image,
+          rss_id: rss_id,
         )
       end
     end
