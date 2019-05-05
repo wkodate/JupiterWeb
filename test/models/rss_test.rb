@@ -8,7 +8,7 @@ class RssTest < ActiveSupport::TestCase
       rss_url: "http://www.example.rdf",
       title: "example",
       site_link: "http://www.example.com",
-      description: "example")
+    )
   end
 
   test "should be valid" do
