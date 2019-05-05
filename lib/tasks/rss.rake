@@ -3,7 +3,6 @@ namespace :rss do
   desc "テスト"
   
   task :fetcher => :environment do
-    # get rss urls
     rsses = Rss.all
     rsses.each do |r|
       rss_id = r.id
@@ -25,9 +24,8 @@ namespace :rss do
         title = item.title
         image = ""
         date = item.date
-        # save db
-        Item.create!(
-          link: link,
+        puts date
+        Item.where(link: link).first_or_create(
           title: title,
           date: date,
           image: image,
