@@ -6,15 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true,
-             activated: true,
-             activated_at: Time.zone.now
-            )
-
 Rss.create!(rss_url:  "http://blog.livedoor.jp/rock1963roll/index.rdf",
              title: "RSS Title1",
              site_link: "http://blog.livedoor.jp/rock1963roll/",

@@ -6,13 +6,11 @@
   <%= @item.title %> <br><small class="text-muted"><%= @rss.title %></small>
 </h1>
 
+<%= if @item.image.nil? %>
 <p>
 <%= image_tag @item.image, skip_pipeline: true, style: 'max-height:100%;max-width:100%;' %>
 </p>
-
-<p>
-  <%= @item.description %>
-</p>
+<%= end %>
 
 <p>
 <%= link_to '続きを読む', @item.link, class: "center-block btn btn-lg btn-custom", :target => "_blank" %>
