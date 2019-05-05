@@ -5,11 +5,9 @@ rss1:
   rss_url: MyString
   title: MyString
   site_link: MyString
-  description: MyText
 
 rss2:
   id: 2
   rss_url: MyString
   title: MyString
   site_link: MyString
-  description: MyText

@@ -18,5 +18,8 @@ module JupiterWebApp
 
     # for all models and all boolean columns, after which the flag must be set to true
     Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
   end
 end

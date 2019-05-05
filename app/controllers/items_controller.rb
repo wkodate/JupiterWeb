@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.eager_load(:rss).paginate(page: params[:page], :per_page => 20).order("date DESC")
+    @items = Item.eager_load(:rss).paginate(page: params[:page], :per_page => 10).order("date DESC")
   end
 
   # GET /items/1
@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
       card: "photo",
       site: request.url,
       title: @item.title,
-      description: @item.description,
       image: @item.image,
     }
   end

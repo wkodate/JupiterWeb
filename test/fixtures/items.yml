@@ -3,7 +3,6 @@
 one:
   link: MyString
   title: MyString
-  description: MyText
   date: 2016-03-12 13:28:55
   image: MyString
   rss_id: 1
@@ -11,7 +10,6 @@ one:
 two:
   link: MyString
   title: MyString
-  description: MyText
   date: 2016-03-12 13:28:55
   image: MyString
   rss_id: 2

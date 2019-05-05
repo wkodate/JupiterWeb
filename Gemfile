@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-0
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.2.3'
 # Bootstrap
@@ -44,6 +44,8 @@ gem 'coveralls', require: false
 # admin tool
 gem 'activeadmin'
 gem 'devise'
+# cron job
+gem 'whenever', require: false
 gem 'nokogiri', '~> 1.10.3'
 # heroku
 gem 'puma'
