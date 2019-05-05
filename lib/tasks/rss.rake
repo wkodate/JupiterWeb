@@ -24,7 +24,6 @@ namespace :rss do
         title = item.title
         image = ""
         date = item.date
-        puts date
         Item.where(link: link).first_or_create(
           title: title,
           date: date,
