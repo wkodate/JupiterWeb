@@ -1,36 +1,24 @@
 Rails.application.routes.draw do
-  # You can have the root of your site routed with "root"
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #   # You can have the root of your site routed with "root"
   root 'items#index'
 
-  get 'sessions/new'
-  get 'rsses/index'
-  get 'items/index'
-  get 'about' => 'static_pages#about'
-  get 'contact' => 'static_pages#contact'
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
-
-  resources :items
-  resources :rsses
-  resources :users
-  resources :account_activations, only: [:edit]
-
-  # 普段はコメントアウト
-  #get 'users/new'
-  #get 'signup' => 'users#new'
-  #get 'password_resets/new'
-  #get 'password_resets/edit'
-  #resources :password_resets, only: [:new, :create, :edit, :update]
+  get 'rsses', to: 'rsses#index'
+  get 'items', to: 'items#index'
+  get '/items/:id', :to => 'items#show', :as => :item
+  get '/rsses/:id', :to => 'rsses#show', :as => :rss
+  get 'about', to: 'static_pages#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #   get 'products/:id', to: 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  #   get 'products/:id/purchase', to: 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

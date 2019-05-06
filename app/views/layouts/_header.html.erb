@@ -2,11 +2,5 @@
   <div class="container">
     <%= link_to image_tag("ic_white.png", :size => "48x48", alt: "nanj-matomeno-matome logo"), root_path, id: "logo-image" %>
     <%= link_to "なんJまとめのまとめ", root_path, id: "logo-text" %>
-    <% if current_user && current_user.admin? %>
-      <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Log out", logout_path, method: "delete", style: "color:#FFFFFF;" %></li>
-      </ul>
-    <% end %>
   </div>
 </header>
