@@ -1,6 +1,6 @@
 require 'rss'
 namespace :rss do
-  desc "テスト"
+  desc "fetch rss and parse item"
   
   task :fetcher => :environment do
     rsses = Rss.all
