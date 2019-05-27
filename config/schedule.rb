@@ -20,5 +20,9 @@
 # Learn more: http://github.com/javan/whenever
 
 every 5.minute do
-  rake "rss:fetcher"
+  rake "rss:fetch"
+end
+
+every 1.day do
+  rake "rss:delete"
 end
