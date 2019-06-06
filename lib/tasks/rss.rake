@@ -1,8 +1,7 @@
 require 'rss'
 namespace :rss do
-  desc "テスト"
-  
-  task :fetcher => :environment do
+  desc "fetch rsses and parse items"
+  task :fetch => :environment do
     rsses = Rss.all
     rsses.each do |r|
       rss_id = r.id
@@ -33,4 +32,10 @@ namespace :rss do
       end
     end
   end
+
+  desc "delete items 7 days ago"
+  task :delete => :environment do
+    Item.where(['date < ?', 7.days.ago]).destroy_all
+  end
+
 end

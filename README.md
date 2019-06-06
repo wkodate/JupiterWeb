@@ -2,7 +2,7 @@
 
 Jupiter Web Application
 
-* Website: https://matome-nanj.net
+* Website: https://matome-nanj.herokuapp.com
 * Twitter: https://twitter.com/matome_nanj
 
 ```

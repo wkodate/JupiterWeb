@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'sitemap_generator'
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "https://matome-nanj.net"
+SitemapGenerator::Sitemap.default_host = "https://matome-nanj.herokuapp.com"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
 SitemapGenerator::Sitemap.create do
