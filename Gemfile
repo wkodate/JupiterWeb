@@ -46,7 +46,7 @@ gem 'activeadmin'
 gem 'devise'
 # cron job
 gem 'whenever', require: false
-gem 'nokogiri', '~> 1.10.3'
+gem 'nokogiri', '~> 1.12.5'
 # heroku
 gem 'puma'
 
